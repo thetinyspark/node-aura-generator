@@ -1,0 +1,31 @@
+{
+    "width": 512,
+    "height": 400,
+    "out": "images/aura{{$index}}.png",
+    "time": 0,
+    "duration": 1000,
+    "step": 200,
+    "round": true,
+    "straight": false,
+    "gif": true,
+    "lineCap": "butt",
+    "lineWidth": 5,
+    "lineColor": "rgba(0,120,220,1)", 
+    "shadowColor": "rgba(0,120,220,1)", 
+    "innerColor": "white",
+    "shadowBlurX": 5, 
+    "shadowBlurY": -5, 
+    "peaks": 6,
+    "power": 1,
+    "spikes": [
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 256,"rot": 0 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 230,"rot": 15 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 230,"rot": -15 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 195,"rot": 30 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 195,"rot": -30 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 140,"rot": 45 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 140,"rot": -45 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 110,"rot": 60 },
+        {"blend": "lighter","x": 256,"y": 300,"width": 128,"height": 110,"rot": -60 }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "aura-generator",
+  "version": "1.0.0",
+  "description": "Un générateur d'aura pour node js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetinyspark/node-aura-generator.git"
+  },
+  "author": "The Tiny Spark <contact@the-tiny-spark.com> (http://the-tiny-spark.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thetinyspark/node-aura-generator/issues"
+  },
+  "homepage": "https://github.com/thetinyspark/node-aura-generator#readme",
+  "dependencies": {
+    "canvas": "^2.6.0"
+  }
+}

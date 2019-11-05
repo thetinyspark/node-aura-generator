@@ -4,7 +4,8 @@
   "description": "Un générateur d'aura pour node js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "aura": "node src/aura.js --config config/blue-aura.json"
   },
   "repository": {
     "type": "git",

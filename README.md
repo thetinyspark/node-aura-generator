@@ -10,7 +10,9 @@ npm install
 # utilisation 
 Lancer la commande suivante dans la console: 
 ```bash
-node src/aura.js --config aura.json
+npm run aura
+# ou 
+node src/aura.js --config config/blue-aura.json
 ```
 
 Les images sont générées dans le dossier images.

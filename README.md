@@ -1,13 +1,13 @@
-# node-aura-generator
-Un générateur d'aura pour node js. 
+# Node-aura-generator
+Un générateur d'aura et de boules de feu à la DBZ pour node js. 
 
-# installation
+# Installation
 Lancer la commande suivante dans la console: 
 ```bash
 npm install 
 ```
 
-# utilisation 
+# Utilisation 
 Lancer la commande suivante dans la console: 
 ```bash
 npm run aura
@@ -16,5 +16,11 @@ node src/aura.js --config config/blue-aura.json
 ```
 
 Les images sont générées dans le dossier images.
+
+# Live Editor
+ Lancer la commande suivante dans la console: 
+```bash
+npm run live-editor
+```
 
 

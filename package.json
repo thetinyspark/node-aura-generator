@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "aura": "node src/aura.js --config config/blue-aura.json", 
+    "aura": "node src/main.js --config config/blue-aura.json", 
     "live-editor": "http-server ./editor/"
   },
   "repository": {

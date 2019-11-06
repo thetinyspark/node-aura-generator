@@ -37,33 +37,14 @@ function init(config) {
         ctx.save();
 
         for (let i = 0; i < config.balls.length; i++) {
-
-            ball = config.balls[i];
-            
-            // geometry
-            fire.x = parseInt(ball.x); 
-            fire.y = parseInt(ball.y);
-            fire.width = parseInt(ball.width);
-            fire.height = parseInt(ball.height);
-            fire.pivotX = parseInt(fire.width / 2);
-            fire.pivotY = parseInt(fire.height);
-            fire.rotation = parseInt(ball.rot);
-            
-            // other configuration
+            fire = Fireball.getInstanceFromData(config.balls[i]);
             fire.offset = offset;
-            fire.power = parseFloat(config.power);
-            fire.numPeaks = parseInt(config.peaks);
-            fire.thickness = parseInt(config.lineWidth);
-            fire.shadowBlur = parseInt(config.shadowBlur);
-            fire.shadowColor = config.shadowColor;
-            fire.edgeColor = config.edgeColor;
-            fire.fillColor = config.fillColor;
 
 
             // draw fireball
             ctx.save();
             ctx.lineCap = config.lineCap;
-            ctx.globalCompositeOperation = ball.blend;
+            ctx.globalCompositeOperation = config.blend;
             fire.render(ctx);
             ctx.restore();
         }

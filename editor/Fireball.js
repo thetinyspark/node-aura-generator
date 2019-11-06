@@ -30,12 +30,12 @@ class Fireball {
         this.height = height;
         this.fillColor = color;
         this.numPeaks = 6;
-        this.shadowBlur = 2;
+        this.shadowBlur = 4;
         this.shadowColor = shadowColor;
         this.edgeColor = edgeColor;
         this.offset = 0;
         this.power = 1;
-        this.thickness = 2;
+        this.thickness = 4;
         this.x = 0;
         this.y = 0;
         this.rotation = 0;
@@ -164,4 +164,4 @@ class Fireball {
 
 }
 
-module.exports.Fireball  = Fireball;
+export {Fireball};

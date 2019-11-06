@@ -1,0 +1,65 @@
+body{
+    background-color: #111111;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink:1;
+}
+
+#render-panel{
+    width: 512px;
+    height: 512px;
+}
+
+    canvas{
+        background: #265088;
+    }
+
+
+
+#config-panel{
+    margin-right: 50px;
+}
+
+    #export-area{
+        width: 100%;
+        height: 355px;
+    }
+
+
+
+
+#ball-editor{
+    margin-left: 50px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+    table tr{
+        padding: 0;
+    }
+
+        table tr th {
+            background-color: #777777;
+            color: white;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #222222;
+        }
+        
+        table tr td {
+            background-color: silver;
+            color: #222222;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #222222;
+        }
+
+        table tr td input{
+            width: 100%;
+        }            
+        
+        table tr td button{
+            width: 100%;
+        }

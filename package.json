@@ -4,8 +4,9 @@
   "description": "Un générateur d'aura pour node js.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
-    "aura": "node src/aura.js --config config/blue-aura.json"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "aura": "node src/aura.js --config config/blue-aura.json", 
+    "live-editor": "http-server ./editor/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/thetinyspark/node-aura-generator#readme",
   "dependencies": {
-    "canvas": "^2.6.0"
+    "canvas": "^2.6.0",
+    "http-server": "^0.11.1"
   }
 }

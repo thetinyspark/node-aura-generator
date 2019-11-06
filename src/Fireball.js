@@ -1,8 +1,31 @@
 /* classe permettant de dessiner une boule de feu d'une certaine couleur*/
 class Fireball {
 
+    static getInstanceFromData(data){
+        let fireball = new Fireball(); 
+        fireball.x = data.x;
+        fireball.y = data.y;
+        fireball.width = data.width;
+        fireball.height = data.height;
+        fireball.pivotX = data.pivotX;
+        fireball.pivotY = data.pivotY;
+        fireball.scaleX = data.scaleX;
+        fireball.scaleY= data.scaleY;
+        fireball.rotation = data.rotation;
+        fireball.fillColor = data.fillColor;
+        fireball.numPeaks = data.numPeaks;
+        fireball.shadowBlur = data.shadowBlur;
+        fireball.shadowColor = data.shadowColor;
+        fireball.edgeColor = data.edgeColor;
+        fireball.offset = data.offset;
+        fireball.power = data.power;
+        fireball.thickness = data.thickness;
 
-    constructor(width, height, color = "#ff0000", edgeColor = "#ffffff", shadowColor ="#ff0000") {
+        return fireball;
+    }
+
+
+    constructor(width = 100, height = 200, color = "#ffffff", edgeColor = "#ff0000", shadowColor ="#ff0000") {
         this.width = width;
         this.height = height;
         this.fillColor = color;
@@ -91,9 +114,17 @@ class Fireball {
         return (1 - x - Math.floor(1 - x));
     }
 
+    getSmartPivot(){
+        return {
+            x: this.width >> 1,
+            y:  this.height - ( this.width >> 1 )
+        }
+    }
+    
     // dessine une boule de feu 
     render(ctx) {
-
+        
+        let startHeight = this.height - ( this.width >> 1 );
         // save context
         ctx.save();
 
@@ -113,14 +144,16 @@ class Fireball {
 
         // draw path
         ctx.beginPath();
-        ctx.moveTo(0, this.height);
-
+        ctx.moveTo(0, startHeight);
+        
+        
         for (let i = 0; i < this.width; i++) {
-            ctx.lineTo(i, this.height - this.compose(i, this.width, this.offset) * this.height);
+            ctx.lineTo(i, startHeight - this.compose(i, this.width, this.offset) * startHeight);
         }
-
-        ctx.lineTo(this.width, this.height);
-        ctx.arc(this.width >> 1, this.height, this.width >> 1, 0, Math.PI);
+        
+        ctx.lineTo(this.width, startHeight);
+        ctx.arc(this.width >> 1, startHeight, this.width >> 1, 0, Math.PI);
+        ctx.lineTo(0, startHeight);
         ctx.fill();
         ctx.stroke();
         ctx.closePath();
